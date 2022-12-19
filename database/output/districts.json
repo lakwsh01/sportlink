@@ -1,0 +1,182 @@
+[
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "hki",
+        "code": "central_and_western_district",
+        "locale": {
+            "zh": "\u4e2d\u897f\u5340",
+            "en": "Central and western district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "hki",
+        "code": "eastern_district",
+        "locale": {
+            "zh": "\u6771\u5340",
+            "en": "Eastern district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "hki",
+        "code": "southern_district",
+        "locale": {
+            "zh": "\u5357\u5340",
+            "en": "Southern district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "hki",
+        "code": "wan_chai_district",
+        "locale": {
+            "zh": "\u7063\u4ed4\u5340",
+            "en": "Wan chai district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "kln",
+        "code": "kowloon_city_district",
+        "locale": {
+            "zh": "\u4e5d\u9f8d\u57ce",
+            "en": "Kowloon city district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "kln",
+        "code": "kwun_tong_district",
+        "locale": {
+            "zh": "\u89c0\u5858\u5340",
+            "en": "Kwun tong district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "kln",
+        "code": "sham_shui_po_district",
+        "locale": {
+            "zh": "\u6df1\u6c34\u57d7\u5340",
+            "en": "Sham shui po district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "kln",
+        "code": "wong_tai_sin_district",
+        "locale": {
+            "zh": "\u9ec3\u5927\u4ed9\u5340",
+            "en": "Wong tai sin district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "kln",
+        "code": "yau_tsim_mong_district",
+        "locale": {
+            "zh": "\u6cb9\u5c16\u65fa\u5340",
+            "en": "Yau tsim mong district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "nt",
+        "code": "yuen_long_district",
+        "locale": {
+            "zh": "\u5143\u6717\u5340",
+            "en": "Yuen long district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "nt",
+        "code": "tuen_mun_district",
+        "locale": {
+            "zh": "\u5c6f\u9580\u5340",
+            "en": "Tuen mun district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "nt",
+        "code": "tsuen_wan_district",
+        "locale": {
+            "zh": "\u8343\u7063\u5340",
+            "en": "Tsuen wan district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "nt",
+        "code": "tai_po_district",
+        "locale": {
+            "zh": "\u5927\u57d4\u5340",
+            "en": "Tai po district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "nt",
+        "code": "sha_tin_district",
+        "locale": {
+            "zh": "\u6c99\u7530\u5340",
+            "en": "Sha tin district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "nt",
+        "code": "sai_kung_district",
+        "locale": {
+            "zh": "\u897f\u8ca2\u5340",
+            "en": "Sai kung district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "nt",
+        "code": "north_district",
+        "locale": {
+            "zh": "\u5317\u5340",
+            "en": "North district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "nt",
+        "code": "kwai_tsing_district",
+        "locale": {
+            "zh": "\u8475\u9752\u5340",
+            "en": "Kwai tsing district"
+        }
+    },
+    {
+        "country": "hk",
+        "province": "hk",
+        "zone": "isn",
+        "code": "island_district",
+        "locale": {
+            "zh": "\u96e2\u5cf6",
+            "en": "Island"
+        }
+    }
+]

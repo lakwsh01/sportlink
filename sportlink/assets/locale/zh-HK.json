@@ -1,0 +1,55 @@
+{
+    "view": {},
+    "game-apply": {
+        "button-label-next": "下一步",
+        "button-label-confirm": "預埋我",
+        "button-label-cancel": "諗諗先",
+        "setting-empty": "未設定",
+        "field-rule-title": "場地規則",
+        "application-retrieve-time-title": "自動取消",
+        "application-retrieve-time-description": "如果場主沒有回應，系統會係<s><s>自動取消申請",
+        "application-retrieve-time-button": "更改取消時間",
+        "game-accept-notification-title": "回覆通知",
+        "game-accept-notification-description": "當場主或系統回應你既申請，我地會向你發送消息",
+        "game-accept-notification-button": "設定",
+        "share-content-policy-title": "聯繫資訊",
+        "share-content-policy-description": "配對成功後，系統會顯示雙方既聯繫方法，包括電話號碼並在場次結束後自動隱藏相關個人資訊，以保障你既私隱",
+        "share-content-policy-button": "設定"
+    },
+    "profile": {
+        "title": "用戶檔案",
+        "description": "提供你的個人資料，我地會係你報名活動既時候，自動提供必要資訊予場主，並係活動結束後隱藏資料。",
+        "display_name_label": "顯示名稱",
+        "display_id_label": "個人ID",
+        "display_phone_label": "電話號碼",
+        "display_gender_label": "性別",
+        "display_whatsapp_label": "Whatsapp"
+    },
+    "genders": {
+        "male": "男性",
+        "female": "女性",
+        "ntdc": "不願透露"
+    },
+    "badminton_level_label": {
+        "hk_0": "撲蝶級",
+        "hk_0_description": "企定定打,每人一邊,對羽毛球的技術、球例及界線都一竅不通。",
+        "hk_1": "快樂級",
+        "hk_1_description": "「不懂球例,不懂正確揸拍手勢,不懂羽毛球的技術、快樂級球例,不懂走位(單/雙),只能將球由己方中場打至對方中場。",
+        "hk_2": "初級",
+        "hk_2_description": "略懂球例,懂簡單步法及簡單技術,基本上能打出高|遠球(中場到中場)、吊球、殺波,放網等,但動作和步法需改善。",
+        "hk_3": "初中級",
+        "hk_3_description": "基本掌握單/雙打模式,懂得球例,能輕易打出高遠球(約中後場到中後場)、吊球、殺波、推球,放網等,初中級步法、動作及手法仍有待改善。",
+        "hk_4": "初高級",
+        "hk_4_description": "基本熟悉單/雙打模式、單/雙打意識、雙打補位、雙打輪轉,單/雙打攻防意識,熟悉大部份羽毛球技術如高遠球(底線到底線)、吊球、殺球、平推擋、平抽、放網等,但穩定性有待改善。",
+        "hk_5": "中級",
+        "hk_5_description": "掌握所有羽毛球技巧,熟悉單/雙打走位,攻守兼備,步法靈活,穩定性仍需改善。水平最少達到羽總Dgrade或以上。",
+        "hk_6": "中高級",
+        "hk_6_description": "所有羽毛球技巧純熟,水平最少達到羽總C grade或以上。",
+        "hk_7": "高級",
+        "hk_7_description": "有豐富大型比賽經驗,水平最少達到羽總B grade或以上。"
+    },
+    "special-label": {
+        "whatsapp": "Whatsapp",
+        "phone": "電話"
+    }
+}

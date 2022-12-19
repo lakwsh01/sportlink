@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "732768197454",
+    "project_id": "sportlink-45001",
+    "storage_bucket": "sportlink-45001.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732768197454:android:0dab5bf6b0c37502b5dc1f",
+        "android_client_info": {
+          "package_name": "com.example.sportlink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732768197454-d12e46r2gavbl1n7rk2e0h3lnv5jv125.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgWIPpHsoZdP_Ap4W4idhW6B1P0X6k52M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732768197454-d12e46r2gavbl1n7rk2e0h3lnv5jv125.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
