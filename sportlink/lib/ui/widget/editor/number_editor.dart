@@ -12,7 +12,7 @@ class NumberEditor extends StatelessWidget {
       super.key});
 
   late final TextEditingController controller =
-      TextEditingController(text: (initialValue ?? 0).toString());
+      TextEditingController(text: (initialValue ?? "").toString());
 
   @override
   Widget build(BuildContext context) {

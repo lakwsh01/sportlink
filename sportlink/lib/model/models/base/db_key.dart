@@ -54,9 +54,11 @@ enum GameDBKey {
   type,
   admin,
   autoConfirm,
+  gameMode,
   autoReject,
   equipment,
   field,
+  fieldRule,
   level,
   limitedTo,
   price,
@@ -77,6 +79,10 @@ extension GameDBKeyMethod on GameDBKey {
         return "auto_reject";
       case GameDBKey.limitedTo:
         return "limited_to";
+      case GameDBKey.gameMode:
+        return "game_mode";
+      case GameDBKey.fieldRule:
+        return "field_rule";
       default:
         return name;
     }

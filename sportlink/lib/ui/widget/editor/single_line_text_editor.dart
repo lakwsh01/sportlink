@@ -2,27 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:sportlink/ui/widget/appbar/appbar_with_trilling.dart';
 
 class SingleLineTextContentEditor extends StatelessWidget {
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final IconData? leadingIcon;
-  final VoidCallback onDone;
+  final ValueSetter<String>? onDone;
   final VoidCallback? onCancel;
   final String title;
   const SingleLineTextContentEditor(
-      {required this.onCancel,
-      required this.onDone,
+      {this.onCancel,
+      this.onDone,
       this.leadingIcon,
-      required this.controller,
+      this.controller,
       required this.title,
       super.key});
 
   @override
   Widget build(BuildContext context) {
+    final _controller = controller ?? TextEditingController();
     return Scaffold(
         appBar: AppbarForEditor(
             title: title,
             onDone: () {
-              Navigator.of(context).pop();
-              onDone.call();
+              Navigator.of(context).pop(_controller.text);
+              onDone?.call(_controller.text);
             },
             onCancel: () {
               Navigator.of(context).pop();
@@ -31,7 +32,7 @@ class SingleLineTextContentEditor extends StatelessWidget {
         body: Padding(
             padding: const EdgeInsets.all(12),
             child: Column(children: [
-              TextField(autofocus: true, controller: controller),
+              TextField(autofocus: true, controller: _controller),
             ])));
   }
 }

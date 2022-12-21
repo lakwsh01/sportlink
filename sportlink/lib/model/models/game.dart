@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart' show DateTimeRange;
 import 'package:sportlink/model/models/base/metadata.dart';
+import 'package:sportlink/static/content/game_mode.dart';
 import './base/repeation.dart';
 import './base/locale_content.dart';
 import './base/db_key.dart';
@@ -10,22 +11,25 @@ import './base/base_model.dart';
 class Game extends BaseModel<Game> {
   final DateTimeRange period;
   final String venue;
-  final String field;
+  final List<String> field;
   final int vacancy;
   final bool autoConfirm;
   final bool autoReject;
   final LocaleContent localeContent;
   final String admin;
   final double price;
+  final GameMode gameMode;
+  final String fieldRule;
 
   /// nullable
   final Map<String, dynamic>? equipment;
   final Repeation? repeation;
-  final Map<LimitationType, List<String>>? limitedTo;
+  final Map<LimitationType, dynamic>? limitedTo;
   final GameType type;
 
   const Game._(
       {required this.localeContent,
+      required this.gameMode,
       required this.type,
       required this.admin,
       required this.autoConfirm,
@@ -38,20 +42,22 @@ class Game extends BaseModel<Game> {
       required this.vacancy,
       required this.venue,
       required this.repeation,
+      required this.fieldRule,
       required super.id,
       required super.metadata});
 
   factory Game({required Map game, required String id}) {
     final Map? limit = game[GameDBKey.limitedTo.key];
-    final Map<LimitationType, List<String>>? limitation = limit?.map(
-        (key, value) =>
-            MapEntry(LimitationTypeMethod.type(key), List<String>.from(value)));
+    final Map<LimitationType, dynamic>? limitation = limit
+        ?.map((key, value) => MapEntry(LimitationTypeMethod.type(key), value));
     final timeRangeStart = game[GameDBKey.period.key][dbKeyTimeRangeStart];
     final timeRangeExpiry = game[GameDBKey.period.key][dbKeyTimeRangeExpiry];
     final Repeation? repeation = game[GameDBKey.repeation.key] != null
         ? Repeation.fromMap(Map.castFrom(game[GameDBKey.repeation.key]))
         : null;
     return Game._(
+        fieldRule: game[GameDBKey.fieldRule.key],
+        gameMode: GameModeMethod.type(game[GameDBKey.gameMode.key]),
         type: GameType.badminton,
         localeContent: LocaleContent(game[GameDBKey.localeContent.key]),
         admin: game[GameDBKey.admin.key],
@@ -100,7 +106,11 @@ class Game extends BaseModel<Game> {
             : null;
 
         return Game._(
+            fieldRule: content[GameDBKey.fieldRule.key] ?? fieldRule,
             type: GameType.badminton,
+            gameMode: content[GameDBKey.gameMode.key] != null
+                ? GameModeMethod.type(content[GameDBKey.gameMode.key])
+                : gameMode,
             localeContent: newLocale ?? localeContent,
             admin: content[GameDBKey.admin.key] ?? admin,
             autoConfirm: content[GameDBKey.autoConfirm.key] ?? autoConfirm,

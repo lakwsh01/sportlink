@@ -1,4 +1,4 @@
-from firebase_admin import db, App
+from firebase_admin import db
 from tools.static import database_url
 
 

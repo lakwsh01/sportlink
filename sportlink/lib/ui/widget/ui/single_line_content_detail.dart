@@ -1,23 +1,23 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sportlink/ui/widget/editor/option_selector.dart';
 import 'package:sportlink/ui/widget/editor/single_line_text_editor.dart';
 
-class SingleLineProfileDetail extends StatelessWidget {
+class SingleLineContentDetail extends StatelessWidget {
   final String label;
   final String content;
   final Key? formKey;
   final void Function(BuildContext context)? onEdit;
-  const SingleLineProfileDetail(
+  const SingleLineContentDetail(
       {required this.label,
       required this.onEdit,
       this.formKey,
       required this.content,
       super.key});
 
-  factory SingleLineProfileDetail.text(final String label, final String content,
+  factory SingleLineContentDetail.text(final String label, final String content,
       [final ValueSetter<String>? onEditComplete, final Key? key]) {
-    return SingleLineProfileDetail(
+    return SingleLineContentDetail(
         onEdit: (BuildContext context) {
           Navigator.of(context).push(MaterialPageRoute(builder: (_) {
             return SingleLineTextContentEditor(
@@ -28,28 +28,17 @@ class SingleLineProfileDetail extends StatelessWidget {
         content: content);
   }
 
-  factory SingleLineProfileDetail.phone(
+  factory SingleLineContentDetail.phone(
       final String label, final String content,
       [final ValueSetter<String>? onEditComplete, final Key? key]) {
-    return SingleLineProfileDetail(
+    return SingleLineContentDetail(
         onEdit: (BuildContext context) {}, label: label, content: content);
   }
-  factory SingleLineProfileDetail.option(final String label,
+  factory SingleLineContentDetail.option(final String label,
       final String defaultOption, final String optionType, List<String> options,
       [final ValueSetter<String>? onEditComplete, final Key? key]) {
-    return SingleLineProfileDetail(
-        onEdit: (BuildContext context) {
-          Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-            return OptionSelector(
-                options: {},
-                defaultOption: defaultOption,
-                onCancel: null,
-                onDone: (String id) {
-                  onEditComplete?.call(id);
-                },
-                title: label);
-          }));
-        },
+    return SingleLineContentDetail(
+        onEdit: (BuildContext context) {},
         label: label,
         content: optionType.tr(gender: defaultOption));
   }

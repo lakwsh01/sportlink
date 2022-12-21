@@ -1,4 +1,13 @@
 {
+    "generic_button_lable": {
+        "cancel": "取消",
+        "confirm": "確定",
+        "save": "儲存",
+        "submit": "提交",
+        "done": "完成",
+        "back": "返回",
+        "add": "新增"
+    },
     "view": {},
     "game-apply": {
         "button-label-next": "下一步",
@@ -25,10 +34,11 @@
         "display_gender_label": "性別",
         "display_whatsapp_label": "Whatsapp"
     },
-    "genders": {
+    "gender": {
         "male": "男性",
         "female": "女性",
-        "ntdc": "不願透露"
+        "ntdc": "不願透露",
+        "all": "不限性別"
     },
     "badminton_level_label": {
         "hk_0": "撲蝶級",
@@ -51,5 +61,15 @@
     "special-label": {
         "whatsapp": "Whatsapp",
         "phone": "電話"
+    },
+    "game_mode": {
+        "single": "單打",
+        "double": "雙打",
+        "mix_double": "混合雙打",
+        "team": "團體"
+    },
+    "duo_mode_option_picker": {
+        "keyboard_type_alphabet": "數字",
+        "keyboard_type_numeric": "字母"
     }
 }

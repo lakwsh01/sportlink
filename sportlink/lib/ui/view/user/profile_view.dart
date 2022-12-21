@@ -7,6 +7,7 @@ import 'package:sportlink/ui/widget/editor/option_selector.dart';
 import 'package:sportlink/ui/widget/editor/single_line_text_editor.dart';
 
 const List<String> genders = ["male", "female", "ntdc"];
+const List<String> targetGenders = ["male", "female", "all"];
 
 class UserProfileView extends StatelessWidget {
   const UserProfileView({super.key});

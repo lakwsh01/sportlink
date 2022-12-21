@@ -9,6 +9,7 @@ from tools.body_decoder import get_event_body_decoder, post_event_body_decoder
 # from helper.tools import authenticate_with_token,  post_event_body_decoder
 
 app = Flask(__name__)
+
 cred = credentials.Certificate("tools/firebase_cred.json")
 initialize_app(cred)
 
@@ -16,6 +17,7 @@ initialize_app(cred)
 @app.route("/", methods=['POST', 'GET'])
 @cross_origin()
 def main(request: Request):
+    print("function start")
     # jwt = request.headers['Authorization']
     request_method = request.method
     request_path = request.path
@@ -50,4 +52,5 @@ def main(request: Request):
                 "code": "????",
                 "message": repr(e),
             }}), status=500, content_type="application/json; charset=utf-8")
+
     return response
