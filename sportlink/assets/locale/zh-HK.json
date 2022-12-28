@@ -68,6 +68,13 @@
         "mix_double": "混合雙打",
         "team": "團體"
     },
+    "game_type": {
+        "badminton": "單打",
+        "football": "雙打",
+        "tennis": "混合雙打",
+        "table_tennis": "團體",
+        "volluball": "團體"
+    },
     "duo_mode_option_picker": {
         "keyboard_type_alphabet": "數字",
         "keyboard_type_numeric": "字母"

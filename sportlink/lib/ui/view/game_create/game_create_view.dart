@@ -1,7 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sportlink/demo/venu.dart';
 import 'package:sportlink/model/models/base/db_key.dart';
 import 'package:sportlink/model/models/game.dart';
 import 'package:sportlink/model/models/veneu.dart';
@@ -16,7 +14,6 @@ import 'package:sportlink/ui/widget/appbar/appbar_with_trilling.dart';
 import 'package:sportlink/ui/widget/editor/date_time_picker.dart';
 import 'package:sportlink/ui/widget/editor/multiple_line_text_editor.dart';
 import 'package:sportlink/ui/widget/editor/option_selector.dart';
-import 'package:sportlink/ui/widget/editor/tree_item_picker.dart';
 import 'package:sportlink/ui/widget/editor/tree_selector.dart';
 import 'package:sportlink/ui/widget/editor/multiple_line_option_selector.dart';
 import 'package:sportlink/ui/widget/editor/number_editor.dart';
@@ -49,6 +46,8 @@ class _GameCreatorViewState extends State<GameCreatorView> {
   Venue? venue;
   List<String> targetShuttlecocks = [];
   String fieldRule = "default_rule";
+  int maxPlayerCount = 0;
+  GameType gameType = GameType.badminton;
   bool get onSaveChecker {
     final dt = DateTime.now();
 
@@ -56,7 +55,8 @@ class _GameCreatorViewState extends State<GameCreatorView> {
         targetDTRange.start.isAfter(dt) &&
         fields.isNotEmpty &&
         targetLevels.isNotEmpty &&
-        vacancy > 0;
+        vacancy > 0 &&
+        vacancy <= maxPlayerCount;
   }
 
   void onSave() {
@@ -82,6 +82,8 @@ class _GameCreatorViewState extends State<GameCreatorView> {
         GameDBKey.vacancy.key: vacancy,
         GameDBKey.veneu.key: venue!.id,
         GameDBKey.fieldRule.key: fieldRule,
+        GameDBKey.gameType.key: gameType.name,
+        GameDBKey.maxPlayerCount.key: maxPlayerCount,
         dbKeyMetaData: {}
       };
 
@@ -106,7 +108,9 @@ class _GameCreatorViewState extends State<GameCreatorView> {
                   padding: const EdgeInsets.only(bottom: 24),
                   child: Row(children: const [Text("請準確填寫場次資料")])),
               SingleLineContentDetail(
-                  label: "類型", onEdit: ((context) {}), content: "羽毛球"),
+                  label: "類型",
+                  onEdit: ((context) {}),
+                  content: gameType.locale),
               SingleLineContentDetail(
                   label: "模式",
                   onEdit: ((context) async {
@@ -348,6 +352,20 @@ class _GameCreatorViewState extends State<GameCreatorView> {
                   }),
                   content: vacancy.toString()),
               SingleLineContentDetail(
+                  label: "總人數",
+                  onEdit: ((context) async {
+                    final newPlayerCount = await Navigator.of(context)
+                        .push(MaterialPageRoute<num>(builder: (_) {
+                      return NumberEditor(numberTitle: "設定總人數", title: "設定餘位");
+                    }));
+                    // debugPrint("newPrice : $newPrice");
+                    if (newPlayerCount != null) {
+                      maxPlayerCount = newPlayerCount.ceil();
+                      setState(() {});
+                    }
+                  }),
+                  content: maxPlayerCount.toString()),
+              SingleLineContentDetail(
                   label: "程度要求",
                   onEdit: ((context) async {
                     final newLevels = await Navigator.of(context)
@@ -356,7 +374,7 @@ class _GameCreatorViewState extends State<GameCreatorView> {
                         initialValue: targetLevels,
                         title: "設定程度要求",
                         localeType: "badminton_level_label",
-                        options: levels(ActivityType.badminton),
+                        options: levels(gameType),
                         minimum: 1,
                       );
                     }));

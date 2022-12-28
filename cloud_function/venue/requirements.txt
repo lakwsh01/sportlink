@@ -1,0 +1,9 @@
+# Function dependencies, for example:
+# package>=version
+flask-cors
+Flask
+requests
+firebase_admin
+pycryptodomex
+sqlalchemy
+pg8000

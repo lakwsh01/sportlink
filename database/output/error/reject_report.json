@@ -1,0 +1,234 @@
+[
+    {
+        "sql": "\n            INSERT INTO game (period,permission,equipment,assistant,limited_to,title,description,game_mode,field,price,repeation,vacancy,field_rule,game_type,max_player_count,venue)\n            Values(Array[to_timestamp(1671438605.004),to_timestamp(1671453005.004)],'{\"user\": \"test_user\"}'::jsonb,'{\"shuttlecock\": \"ARRAY['RSL - Superme','LILING - G200']\"}'::jsonb,'{}'::jsonb,'{\"gender\": \"male\", \"level\": \"ARRAY['hk_6','hk_5']\"}'::jsonb,Null,Null,'double',ARRAY[2,8,97,66],59,Null,3,'default_rule','badminton',28,'venue-bd1f330f003343658935f8fd186a111e')\n        ",
+        "error": "ProgrammingError('(pg8000.dbapi.ProgrammingError) {\\'S\\': \\'ERROR\\', \\'V\\': \\'ERROR\\', \\'C\\': \\'42601\\', \\'M\\': \\'syntax error at or near \"RSL\"\\', \\'P\\': \\'324\\', \\'F\\': \\'scan.l\\', \\'L\\': \\'1180\\', \\'R\\': \\'scanner_yyerror\\'}')",
+        "data": {
+            "permission": {
+                "user": "test_user"
+            },
+            "locale_content": {
+                "title": "Game"
+            },
+            "assistant": {
+                "auto_reject": false,
+                "auto_confirm": true
+            },
+            "game_mode": "double",
+            "limited_to": {
+                "gender": "male",
+                "level": [
+                    "hk_5",
+                    "hk_6"
+                ]
+            },
+            "field": [
+                2,
+                97,
+                8,
+                66
+            ],
+            "price": 59,
+            "start": 1671438605004,
+            "expiry": 1671453005004,
+            "repeation": null,
+            "equipment": {
+                "shuttlecock": [
+                    "RSL - Superme",
+                    "LILING - G200"
+                ]
+            },
+            "admin": "test_user",
+            "vacancy": 3,
+            "venue": "venue-bd1f330f003343658935f8fd186a111e",
+            "field_rule": "default_rule",
+            "game_type": "badminton",
+            "max_player_count": 28
+        },
+        "line": 1
+    },
+    {
+        "sql": "\n            INSERT INTO game (period,permission,equipment,assistant,limited_to,title,description,game_mode,field,price,repeation,vacancy,field_rule,game_type,max_player_count,venue)\n            Values(Array[to_timestamp(1672111805.343),to_timestamp(1672129805.343)],'{\"user\": \"test_user\"}'::jsonb,'{\"shuttlecock\": \"ARRAY['RSL - Superme','LILING - G200']\"}'::jsonb,'{}'::jsonb,'{\"gender\": \"male\", \"level\": \"ARRAY['hk_6','hk_5']\"}'::jsonb,Null,Null,'double',ARRAY[73,97,13,12,69,94],72,Null,4,'default_rule','badminton',42,'venue-0b33420d82c34258a20150a189236912')\n        ",
+        "error": "ProgrammingError('(pg8000.dbapi.ProgrammingError) {\\'S\\': \\'ERROR\\', \\'V\\': \\'ERROR\\', \\'C\\': \\'42601\\', \\'M\\': \\'syntax error at or near \"RSL\"\\', \\'P\\': \\'324\\', \\'F\\': \\'scan.l\\', \\'L\\': \\'1180\\', \\'R\\': \\'scanner_yyerror\\'}')",
+        "data": {
+            "permission": {
+                "user": "test_user"
+            },
+            "locale_content": {
+                "title": "Game"
+            },
+            "assistant": {
+                "auto_reject": false,
+                "auto_confirm": true
+            },
+            "game_mode": "double",
+            "limited_to": {
+                "gender": "male",
+                "level": [
+                    "hk_5",
+                    "hk_6"
+                ]
+            },
+            "field": [
+                73,
+                97,
+                94,
+                69,
+                13,
+                12
+            ],
+            "price": 72,
+            "start": 1672111805343,
+            "expiry": 1672129805343,
+            "repeation": null,
+            "equipment": {
+                "shuttlecock": [
+                    "RSL - Superme",
+                    "LILING - G200"
+                ]
+            },
+            "admin": "test_user",
+            "vacancy": 4,
+            "venue": "venue-0b33420d82c34258a20150a189236912",
+            "field_rule": "default_rule",
+            "game_type": "badminton",
+            "max_player_count": 42
+        },
+        "line": 2
+    },
+    {
+        "sql": "\n            INSERT INTO game (period,permission,equipment,assistant,limited_to,title,description,game_mode,field,price,repeation,vacancy,field_rule,game_type,max_player_count,venue)\n            Values(Array[to_timestamp(1672176605.684),to_timestamp(1672194605.684)],'{\"user\": \"test_user\"}'::jsonb,'{\"shuttlecock\": \"ARRAY['RSL - Superme','LILING - G200']\"}'::jsonb,'{}'::jsonb,'{\"gender\": \"all\", \"level\": \"ARRAY['hk_6']\"}'::jsonb,Null,Null,'double',ARRAY[87,76,82,20,18],50,Null,5,'default_rule','badminton',35,'venue-8a32125d7c7b425d9acd59fca57ed018')\n        ",
+        "error": "ProgrammingError('(pg8000.dbapi.ProgrammingError) {\\'S\\': \\'ERROR\\', \\'V\\': \\'ERROR\\', \\'C\\': \\'42601\\', \\'M\\': \\'syntax error at or near \"RSL\"\\', \\'P\\': \\'324\\', \\'F\\': \\'scan.l\\', \\'L\\': \\'1180\\', \\'R\\': \\'scanner_yyerror\\'}')",
+        "data": {
+            "permission": {
+                "user": "test_user"
+            },
+            "locale_content": {
+                "title": "Game"
+            },
+            "assistant": {
+                "auto_reject": false,
+                "auto_confirm": true
+            },
+            "game_mode": "double",
+            "limited_to": {
+                "gender": "all",
+                "level": [
+                    "hk_6"
+                ]
+            },
+            "field": [
+                18,
+                82,
+                87,
+                20,
+                76
+            ],
+            "price": 50,
+            "start": 1672176605684,
+            "expiry": 1672194605684,
+            "repeation": null,
+            "equipment": {
+                "shuttlecock": [
+                    "RSL - Superme",
+                    "LILING - G200"
+                ]
+            },
+            "admin": "test_user",
+            "vacancy": 5,
+            "venue": "venue-8a32125d7c7b425d9acd59fca57ed018",
+            "field_rule": "default_rule",
+            "game_type": "badminton",
+            "max_player_count": 35
+        },
+        "line": 3
+    },
+    {
+        "sql": "\n            INSERT INTO game (period,permission,equipment,assistant,limited_to,title,description,game_mode,field,price,repeation,vacancy,field_rule,game_type,max_player_count,venue)\n            Values(Array[to_timestamp(1672875006.018),to_timestamp(1672893006.018)],'{\"user\": \"test_user\"}'::jsonb,'{\"shuttlecock\": \"ARRAY['RSL - Superme','LILING - G200']\"}'::jsonb,'{}'::jsonb,'{\"gender\": \"female\", \"level\": \"ARRAY['hk_5']\"}'::jsonb,Null,Null,'double',ARRAY[10],51,Null,5,'default_rule','badminton',7,'venue-4dd3ab1574954700b63af7b02f6e4014')\n        ",
+        "error": "ProgrammingError('(pg8000.dbapi.ProgrammingError) {\\'S\\': \\'ERROR\\', \\'V\\': \\'ERROR\\', \\'C\\': \\'42601\\', \\'M\\': \\'syntax error at or near \"RSL\"\\', \\'P\\': \\'324\\', \\'F\\': \\'scan.l\\', \\'L\\': \\'1180\\', \\'R\\': \\'scanner_yyerror\\'}')",
+        "data": {
+            "permission": {
+                "user": "test_user"
+            },
+            "locale_content": {
+                "title": "Game"
+            },
+            "assistant": {
+                "auto_reject": false,
+                "auto_confirm": true
+            },
+            "game_mode": "double",
+            "limited_to": {
+                "gender": "female",
+                "level": [
+                    "hk_5"
+                ]
+            },
+            "field": [
+                10
+            ],
+            "price": 51,
+            "start": 1672875006018,
+            "expiry": 1672893006018,
+            "repeation": null,
+            "equipment": {
+                "shuttlecock": [
+                    "RSL - Superme",
+                    "LILING - G200"
+                ]
+            },
+            "admin": "test_user",
+            "vacancy": 5,
+            "venue": "venue-4dd3ab1574954700b63af7b02f6e4014",
+            "field_rule": "default_rule",
+            "game_type": "badminton",
+            "max_player_count": 7
+        },
+        "line": 4
+    },
+    {
+        "sql": "\n            INSERT INTO game (period,permission,equipment,assistant,limited_to,title,description,game_mode,field,price,repeation,vacancy,field_rule,game_type,max_player_count,venue)\n            Values(Array[to_timestamp(1671265806.375),to_timestamp(1671287406.375)],'{\"user\": \"test_user\"}'::jsonb,'{\"shuttlecock\": \"ARRAY['RSL - Superme','LILING - G200']\"}'::jsonb,'{}'::jsonb,'{\"gender\": \"male\", \"level\": \"ARRAY['hk_6']\"}'::jsonb,Null,Null,'double',ARRAY[30,80,41,42],52,Null,4,'default_rule','badminton',28,'venue-64d6fdd5d9df4d65ab43fe211cf574fb')\n        ",
+        "error": "ProgrammingError('(pg8000.dbapi.ProgrammingError) {\\'S\\': \\'ERROR\\', \\'V\\': \\'ERROR\\', \\'C\\': \\'42601\\', \\'M\\': \\'syntax error at or near \"RSL\"\\', \\'P\\': \\'324\\', \\'F\\': \\'scan.l\\', \\'L\\': \\'1180\\', \\'R\\': \\'scanner_yyerror\\'}')",
+        "data": {
+            "permission": {
+                "user": "test_user"
+            },
+            "locale_content": {
+                "title": "Game"
+            },
+            "assistant": {
+                "auto_reject": false,
+                "auto_confirm": true
+            },
+            "game_mode": "double",
+            "limited_to": {
+                "gender": "male",
+                "level": [
+                    "hk_6"
+                ]
+            },
+            "field": [
+                30,
+                41,
+                80,
+                42
+            ],
+            "price": 52,
+            "start": 1671265806375,
+            "expiry": 1671287406375,
+            "repeation": null,
+            "equipment": {
+                "shuttlecock": [
+                    "RSL - Superme",
+                    "LILING - G200"
+                ]
+            },
+            "admin": "test_user",
+            "vacancy": 4,
+            "venue": "venue-64d6fdd5d9df4d65ab43fe211cf574fb",
+            "field_rule": "default_rule",
+            "game_type": "badminton",
+            "max_player_count": 28
+        },
+        "line": 5
+    }
+]

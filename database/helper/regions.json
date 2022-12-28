@@ -1,0 +1,233 @@
+{
+  "tw_taichung": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Taichung City",
+      "zh_tw": "\u53f0\u4e2d\u5e02"
+    },
+    "search_tags": [
+      "Taichung City",
+      "\u53f0\u4e2d\u5e02"
+    ]
+  },
+  "tw_tainan": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Tainan City",
+      "zh_tw": "\u53f0\u5357\u5e02"
+    },
+    "search_tags": [
+      "Tainan City",
+      "\u53f0\u5357\u5e02"
+    ]
+  },
+  "tw_taipei": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Taipei City",
+      "zh_tw": "\u53f0\u5317\u5e02"
+    },
+    "search_tags": [
+      "Taipei City",
+      "\u53f0\u5317\u5e02"
+    ]
+  },
+  "tw_newtaipei": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "New Taipei City",
+      "zh_tw": "\u65b0\u5317\u5e02"
+    },
+    "search_tags": [
+      "New Taipei City",
+      "\u65b0\u5317\u5e02"
+    ]
+  },
+  "tw_keelung": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Keelung City",
+      "zh_tw": "\u57fa\u9686\u5e02"
+    },
+    "search_tags": [
+      "Keelung City",
+      "\u57fa\u9686\u5e02"
+    ]
+  },
+  "tw_lienchiang": {
+    "active_for_search": false,
+    "locale": {
+      "en_us": "Lienchiang County",
+      "zh_tw": "\u9023\u6c5f\u7e23"
+    },
+    "search_tags": [
+      "Lienchiang County",
+      "\u9023\u6c5f\u7e23"
+    ]
+  },
+  "tw_yilan": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Yilan County",
+      "zh_tw": "\u5b9c\u862d\u7e23"
+    },
+    "search_tags": [
+      "Yilan County",
+      "\u5b9c\u862d\u7e23"
+    ]
+  },
+  "tw_hsinchu_city": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Hsinchu City",
+      "zh_tw": "\u65b0\u7af9\u5e02"
+    },
+    "search_tags": [
+      "Hsinchu City",
+      "\u65b0\u7af9\u5e02"
+    ]
+  },
+  "tw_hsinchu_country": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Hsinchu City",
+      "zh_tw": "\u65b0\u7af9\u7e23"
+    },
+    "search_tags": [
+      "Hsinchu City",
+      "\u65b0\u7af9\u7e23"
+    ]
+  },
+  "tw_taoyuan": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Taoyuan City",
+      "zh_tw": "\u6843\u5712\u5e02"
+    },
+    "search_tags": [
+      "Taoyuan City",
+      "\u6843\u5712\u5e02"
+    ]
+  },
+  "tw_miaoli": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Miaoli County",
+      "zh_tw": "\u82d7\u6817\u7e23"
+    },
+    "search_tags": [
+      "Miaoli County",
+      "\u82d7\u6817\u7e23"
+    ]
+  },
+  "tw_changhua": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Changhua County",
+      "zh_tw": "\u5f70\u5316\u7e23"
+    },
+    "search_tags": [
+      "Changhua County",
+      "\u5f70\u5316\u7e23"
+    ]
+  },
+  "tw_nantou": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Nantou County",
+      "zh_tw": "\u5357\u6295\u7e23"
+    },
+    "search_tags": [
+      "Nantou County",
+      "\u5357\u6295\u7e23"
+    ]
+  },
+  "tw_chiayi_country": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Chiayi Country",
+      "zh_tw": "\u5609\u7fa9\u7e23"
+    },
+    "search_tags": [
+      "Chiayi Country",
+      "\u5609\u7fa9\u7e23"
+    ]
+  },
+  "tw_chiayi_city": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Chiayi City",
+      "zh_tw": "\u5609\u7fa9\u5e02"
+    },
+    "search_tags": [
+      "Chiayi City",
+      "\u5609\u7fa9\u5e02"
+    ]
+  },
+  "tw_yunlin": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Yunlin Country",
+      "zh_tw": "\u96f2\u6797\u7e23"
+    },
+    "search_tags": [
+      "Yunlin Country",
+      "\u96f2\u6797\u7e23"
+    ]
+  },
+  "tw_kaohsiung": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Kaohsiung City",
+      "zh_tw": "\u9ad8\u96c4\u5e02"
+    },
+    "search_tags": [
+      "Kaohsiung City",
+      "\u9ad8\u96c4\u5e02"
+    ]
+  },
+  "tw_penghu": {
+    "active_for_search": false,
+    "locale": {
+      "en_us": "Penghu Country",
+      "zh_tw": "\u6f8e\u6e56\u7e23"
+    },
+    "search_tags": [
+      "Penghu Country",
+      "\u6f8e\u6e56\u7e23"
+    ]
+  },
+  "tw_pingtung": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Pingtung Country",
+      "zh_tw": "\u5c4f\u6771\u7e23"
+    },
+    "search_tags": [
+      "Pingtung Country",
+      "\u5c4f\u6771\u7e23"
+    ]
+  },
+  "tw_taitung": {
+    "active_for_search": false,
+    "locale": {
+      "en_us": "Taitung Country",
+      "zh_tw": "\u53f0\u6771\u7e23"
+    },
+    "search_tags": [
+      "Taitung Country",
+      "\u53f0\u6771\u7e23"
+    ]
+  },
+  "tw_hualien": {
+    "active_for_search": true,
+    "locale": {
+      "en_us": "Hualien Country",
+      "zh_tw": "\u82b1\u84ee\u7e23"
+    },
+    "search_tags": [
+      "Hualien Country",
+      "\u82b1\u84ee\u7e23"
+    ]
+  }
+}

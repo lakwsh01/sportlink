@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart' show DateTimeRange;
 import 'package:sportlink/model/models/base/metadata.dart';
 import 'package:sportlink/static/content/game_mode.dart';
-import './base/repeation.dart';
+// import './base/repeation.dart';
 import './base/locale_content.dart';
 import './base/db_key.dart';
 import './base/base_model.dart';
@@ -20,17 +20,19 @@ class Game extends BaseModel<Game> {
   final double price;
   final GameMode gameMode;
   final String fieldRule;
+  final int maxPlayerCount;
 
   /// nullable
   final Map<String, dynamic>? equipment;
-  final Repeation? repeation;
+  // final Repeation? repeation;
   final Map<LimitationType, dynamic>? limitedTo;
-  final GameType type;
+  final GameType gameType;
 
   const Game._(
       {required this.localeContent,
+      required this.maxPlayerCount,
       required this.gameMode,
-      required this.type,
+      required this.gameType,
       required this.admin,
       required this.autoConfirm,
       required this.autoReject,
@@ -41,7 +43,7 @@ class Game extends BaseModel<Game> {
       required this.period,
       required this.vacancy,
       required this.venue,
-      required this.repeation,
+      // required this.repeation,
       required this.fieldRule,
       required super.id,
       required super.metadata});
@@ -52,13 +54,14 @@ class Game extends BaseModel<Game> {
         ?.map((key, value) => MapEntry(LimitationTypeMethod.type(key), value));
     final timeRangeStart = game[GameDBKey.period.key][dbKeyTimeRangeStart];
     final timeRangeExpiry = game[GameDBKey.period.key][dbKeyTimeRangeExpiry];
-    final Repeation? repeation = game[GameDBKey.repeation.key] != null
-        ? Repeation.fromMap(Map.castFrom(game[GameDBKey.repeation.key]))
-        : null;
+    // final Repeation? repeation = game[GameDBKey.repeation.key] != null
+    //     ? Repeation.fromMap(Map.castFrom(game[GameDBKey.repeation.key]))
+    //     : null;
     return Game._(
+        maxPlayerCount: game[GameDBKey.maxPlayerCount.key],
         fieldRule: game[GameDBKey.fieldRule.key],
         gameMode: GameModeMethod.type(game[GameDBKey.gameMode.key]),
-        type: GameType.badminton,
+        gameType: GameType.badminton,
         localeContent: LocaleContent(game[GameDBKey.localeContent.key]),
         admin: game[GameDBKey.admin.key],
         autoConfirm: game[GameDBKey.autoConfirm.key],
@@ -72,7 +75,7 @@ class Game extends BaseModel<Game> {
             end: DateTime.fromMillisecondsSinceEpoch(timeRangeExpiry)),
         vacancy: game[GameDBKey.vacancy.key],
         venue: game[GameDBKey.veneu.key],
-        repeation: repeation,
+        // repeation: repeation,
         id: id,
         metadata: MetaData(game[dbKeyMetaData]));
   }
@@ -101,13 +104,15 @@ class Game extends BaseModel<Game> {
         final newLocale = content[GameDBKey.localeContent.key] != null
             ? LocaleContent(content[GameDBKey.localeContent.key])
             : null;
-        final newRepeation = content[GameDBKey.repeation.key] != null
-            ? Repeation.fromMap(content[GameDBKey.repeation.key])
-            : null;
+        // final newRepeation = content[GameDBKey.repeation.key] != null
+        //     ? Repeation.fromMap(content[GameDBKey.repeation.key])
+        //     : null;
 
         return Game._(
+            maxPlayerCount:
+                content[GameDBKey.maxPlayerCount.key] ?? maxPlayerCount,
             fieldRule: content[GameDBKey.fieldRule.key] ?? fieldRule,
-            type: GameType.badminton,
+            gameType: GameType.badminton,
             gameMode: content[GameDBKey.gameMode.key] != null
                 ? GameModeMethod.type(content[GameDBKey.gameMode.key])
                 : gameMode,
@@ -122,7 +127,7 @@ class Game extends BaseModel<Game> {
             period: content[GameDBKey.period.key] ?? period,
             vacancy: content[GameDBKey.vacancy.key] ?? vacancy,
             venue: content[GameDBKey.veneu.key] ?? venue,
-            repeation: newRepeation ?? repeation,
+            // repeation: newRepeation ?? repeation,
             id: id,
             metadata: metadata);
       };

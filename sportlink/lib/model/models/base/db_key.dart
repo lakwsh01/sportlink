@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:sportlink/model/model.dart';
 
 enum MetadataKey { creation, creator, lastModification, lastModifier }
@@ -50,10 +51,12 @@ extension LocaleContentKeyMethod on LocaleContentDBKey {
 
 ///
 enum GameDBKey {
+  gameType,
   localeContent,
   type,
   admin,
   autoConfirm,
+  maxPlayerCount,
   gameMode,
   autoReject,
   equipment,
@@ -83,6 +86,10 @@ extension GameDBKeyMethod on GameDBKey {
         return "game_mode";
       case GameDBKey.fieldRule:
         return "field_rule";
+      case GameDBKey.maxPlayerCount:
+        return "max_player_count";
+      case GameDBKey.gameType:
+        return "game_type";
       default:
         return name;
     }
@@ -283,6 +290,16 @@ enum FacilityType { badminton, football, tennis, tableTennis, volluball }
 enum GameType { badminton, football, tennis, tableTennis, volluball }
 
 extension GameTypeMethod on GameType {
+  String get locale {
+    const locale = "game_type";
+    switch (this) {
+      case GameType.tableTennis:
+        return locale.tr(gender: "table_tennis");
+      default:
+        return locale.tr(gender: name);
+    }
+  }
+
   String get key {
     switch (this) {
       case GameType.tableTennis:
@@ -324,5 +341,3 @@ extension FacilityTypeMethod on FacilityType {
     }
   }
 }
-
-enum ActivityType { badminton, football }
